@@ -23,7 +23,17 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<link href="css/carousel.css" rel="stylesheet">
+<link href="css/theme.css" rel="stylesheet">
 
+<style>
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+</style>
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
@@ -71,9 +81,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                    <div id="owl-demo" class="owl-carousel owl-theme">
+ 
+  <div class="item"><img src="img/rwd.jpg" alt="The Last of us"></div>
+  <div class="item"><img src="img/rwd.jpg" alt="GTA V"></div>
+  <div class="item"><img src="img/rwd.jpg" alt="Mirror Edge"></div>
+ 
+</div>
                 </div>
             </div>
         </div>
@@ -122,6 +136,23 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
 
+<script src="js/carousel.js"></script>
+
+<script>
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+		
+      navigation : false, 
+	  autoPlay: 10000,
+      slideSpeed : 500,
+      paginationSpeed : 400,
+      singleItem:true
+ 
+  });
+ 
+});
+</script>
 </body>
 
 </html>
